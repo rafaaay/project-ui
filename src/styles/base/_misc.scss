@@ -1,0 +1,23 @@
+@use "../abstract" as *;
+
+.tagline {
+    color: var(--clr-white);
+    text-align: center;
+    text-transform: capitalize;
+    padding: clamp(14rem, 2.143vw + 13.314rem, 16.4rem) clamp(2.4rem, 19.286vw + -3.771rem, 24rem);
+
+    &__preheading {
+        font-size: clamp(2rem, 1.071vw + 1.657rem, 3.2rem);
+        font-weight: 700;
+        margin-bottom: 4rem;
+
+        @include mobile {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__heading {
+        font-size: clamp(6.4rem, 7.857vw + 3.886rem, 15.2rem);
+        // line-height: clamp(7.6rem, -51.607vw + 92.514rem, 18.2rem);
+    }
+}

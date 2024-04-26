@@ -1,0 +1,137 @@
+@use "../abstract" as *;
+
+.header {
+    background-color: var(--clr-black-pearl);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.4rem 3.2rem;
+        position: relative;
+    }
+
+    &__mobile-header {
+        display: none;
+
+        @include mobile-tablet {
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
+
+        @include tablet {
+            justify-content: center;
+        }
+
+        .btn-close {
+            border: none;
+            background: none;
+            cursor: pointer;
+            position: absolute;
+            right: 4rem;
+            top: 0;
+
+            @include mobile {
+                right: 0;
+            }
+        }
+    }
+
+    &__left {
+        @include mobile-tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .mobile-btns {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .btn-open {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.4rem;
+
+        @include mobile-tablet {
+            position: fixed;
+            left: -100%;
+            top: 0;
+            z-index: 10;
+            height: 100dvh;
+            width: 100dvw;
+            flex-direction: column;
+            background-color: var(--clr-black-pearl);
+            transition: left 0.3s ease-in;
+            overflow: auto;
+
+            &.open {
+                left: 0;
+            }
+        }
+
+        @include tablet {
+            justify-content: space-around;
+        }
+
+        @include mobile {
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 4.8rem 2.4rem;
+            gap: 4.8rem;
+        }
+
+        .btn {
+            @include mobile {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.4rem;
+
+        @include mobile-tablet {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            align-items: flex-start;
+            width: 100%;
+            gap: 0;
+        }
+
+        a {
+            color: var(--clr-white);
+
+            @include mobile-tablet {
+                font-size: var(--fs-500);
+                font-weight: 700;
+            }
+
+            @include mobile {
+                padding: 2.4rem 0;
+                border-bottom: 1px solid #CF63FF;
+                width: 100%;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

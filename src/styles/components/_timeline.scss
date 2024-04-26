@@ -1,0 +1,61 @@
+@use "../abstract" as *;
+
+.timeline {
+
+    .heading {
+        margin-bottom: 4rem;
+    }
+
+    &__container.container {
+        @include desktop {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left, .right {
+        @include desktop {
+            width: 50%;
+        }
+    }
+
+    .left {
+        @include mobile-tablet {
+            display: none;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 6.4rem;
+        border-left: 2px solid rgba(76, 0, 255, 0.2);
+        padding-left: 5rem;
+    }
+
+    &__avatar {
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .card {
+        position: relative;
+
+        &::before {
+            content: url(/public/images/misc/img_timeline-bullet.svg);
+            display: block;
+            position: absolute;
+            left: - calc(5rem + 1.6rem);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

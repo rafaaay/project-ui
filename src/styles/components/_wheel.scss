@@ -1,0 +1,22 @@
+@use "../abstract" as *;
+
+.wheel {
+    .heading--sub-text {
+        margin-top: 2.4rem;
+        margin-bottom: 6rem;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        .avatar {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+        }
+    }
+}

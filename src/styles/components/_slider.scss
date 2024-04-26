@@ -1,0 +1,23 @@
+@use "../abstract" as *;
+
+.slider {
+    padding: 0 4.4rem;
+
+    @include mobile {
+        padding: 2rem;
+    }
+
+    &__container {
+        background-color: var(--clr-violet);
+        border-radius: 4rem;
+    }
+
+    &__content {
+        display: flex;
+        gap: 3.6rem;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+}

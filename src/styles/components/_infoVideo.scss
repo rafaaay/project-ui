@@ -1,0 +1,25 @@
+@use "../abstract" as *;
+
+.info-video {
+    padding: 0 4.4rem;
+
+    @include mobile {
+        padding: 2rem;
+    }
+
+    &__content {
+        border: 1px solid #C75FFE;
+        border-radius: 4rem;
+    }
+
+    &__video {
+        video {
+            width: 100%;
+        }
+    }
+
+    .heading--sub-text {
+        margin-top: 2.4rem;
+        margin-bottom: 6rem;
+    }
+}

@@ -1,0 +1,36 @@
+@use "../abstract" as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--clr-white);
+    gap: 1.6rem;
+    border: 1px solid #C75FFE;
+    border-radius: 4rem;
+    padding: 7.2rem 4rem;
+
+    // &--slider {
+    //     min-width: 60rem;
+    // }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+    }
+
+    &__heading {
+        font-size: var(--fs-600);
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    &__subheading {
+        font-size: var(--fs-400);
+        font-weight: 500;
+        margin-top: 1.6rem;
+    }
+}

@@ -1,0 +1,38 @@
+@use "../abstract" as *;
+
+.hero {
+    &__content {
+        padding: clamp(2.4rem, 8.571vw + -0.343rem, 12rem);
+        padding-bottom: 0;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 3.2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__img {
+        @include desktop {
+            transform: translateY(-5.5rem);
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .heading--page {
+        margin-bottom: 1.6rem;
+    }
+
+    .heading--sub-text {
+        @include desktop {
+            padding: 0 10rem;
+        }
+    }
+}

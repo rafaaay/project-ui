@@ -1,0 +1,39 @@
+@use "../abstract" as *;
+
+body {
+    font-family: "Aeonik";
+    font-size: 1.6rem;
+}
+
+.heading, .paragraph {
+    text-align: center;
+}
+
+.heading {
+    text-transform: capitalize;
+
+    &--page {
+        font-size: clamp(var(--fs-700), 4.464vw + 2.571rem, var(--fs-xl));
+        font-weight: 700;
+        color: var(--clr-white);
+        line-height: clamp(4.8rem, 5.357vw + 3.086rem, 10.8rem);
+        background: linear-gradient(93.95deg, #C75FFE 36.12%, #6B29EE 81.28%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &--section {
+        font-size: clamp(var(--fs-600), 3.571vw + 2.057rem, var(--fs-lg));
+        font-weight: 500;
+        line-height: clamp(3.84rem, 3.804vw + 2.623rem, 8.1rem);
+        color: var(--clr-white);
+    }
+
+    &--sub-text {
+        font-size: clamp(var(--fs-400), 0.714vw + 1.371rem, var(--fs-500));
+        line-height: clamp(2.4rem, 0.536vw + 2.229rem, 3rem);
+        color: var(--clr-white);
+        text-transform: none;
+    }
+}

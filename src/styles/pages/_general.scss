@@ -1,0 +1,15 @@
+@use "../abstract" as *;
+
+.page {
+ background-color: var(--clr-black-pearl);
+ min-height: 100dvh;
+}
+
+.section .container {
+    padding: clamp(4.4rem, 3.214vw + 3.371rem, 8rem) clamp(2.4rem, 10.714vw - 1.029rem, 14.4rem);
+}
+
+.section .heading--sub-text {
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
+}
